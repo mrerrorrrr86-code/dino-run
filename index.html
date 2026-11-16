@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DINO RUN - Endless Runner</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="game-container">
+
+    <header class="top-bar">
+      <div class="logo">🦖 DINO RUN</div>
+      <button id="soundBtn">🔊</button>
+    </header>
+
+    <div class="stats">
+      <div class="stat">
+        <span>SCORE</span>
+        <strong id="score">00000</strong>
+      </div>
+      <div class="stat">
+        <span>BEST</span>
+        <strong id="best">00000</strong>
+      </div>
+    </div>
+
+    <section class="game-area">
+      <canvas id="gameCanvas" width="900" height="350"></canvas>
+
+      <div class="overlay" id="overlay">
+        <div class="game-message">
+          <div class="dino-icon">🦖</div>
+          <h1 id="messageTitle">DINO RUN</h1>
+          <p id="messageText">Ready for an endless adventure?</p>
+          <button id="startBtn">START GAME ▶</button>
+        </div>
+      </div>
+
+      <div class="pause-label" id="pauseLabel">PAUSED</div>
+    </section>
+
+    <div class="controls">
+      <button id="jumpBtn">⬆ JUMP</button>
+      <button id="duckBtn">⬇ DUCK</button>
+      <button id="pauseBtn">Ⅱ PAUSE</button>
+    </div>
+
+    <div class="instructions">
+      <p>SPACE / ↑ = JUMP</p>
+      <p>↓ = DUCK</p>
+      <p>ESC = PAUSE</p>
+    </div>
+
+    <footer>MADE WITH ❤️ BY ERRORYASH</footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
