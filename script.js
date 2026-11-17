@@ -358,3 +358,29 @@ document.addEventListener("keyup", event => {
 });
 
 draw();
+
+// Mobile touch support fix
+
+startBtn.addEventListener("touchend", function(event) {
+  event.preventDefault();
+
+  if (!running) {
+    startGame();
+  }
+}, { passive: false });
+
+jumpBtn.addEventListener("touchstart", function(event) {
+  event.preventDefault();
+  jump();
+}, { passive: false });
+
+duckBtn.addEventListener("touchstart", function(event) {
+  event.preventDefault();
+  setDuck(true);
+}, { passive: false });
+
+duckBtn.addEventListener("touchend", function(event) {
+  event.preventDefault();
+  setDuck(false);
+}, { passive: false });
+
