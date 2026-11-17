@@ -235,4 +235,37 @@ button {
     min-height: 50px;
   }
 }
+/* Mobile Start Button Visibility Fix */
 
+.game-area {
+  position: relative;
+  min-height: 220px;
+}
+
+.overlay {
+  display: flex;
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  background: #071426e8;
+}
+
+.game-message {
+  width: 100%;
+  padding: 15px;
+  position: relative;
+  z-index: 21;
+}
+
+#startBtn {
+  display: inline-block;
+  visibility: visible;
+  opacity: 1;
+  position: relative;
+  z-index: 22;
+  min-height: 50px;
+  padding: 15px 35px;
+  font-size: 16px;
+}
