@@ -357,7 +357,6 @@ document.addEventListener("keyup", event => {
 });
 
 draw();
-
 // Universal mouse + mobile touch controls
 
 startBtn.addEventListener("click", startGame);
