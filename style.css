@@ -204,3 +204,35 @@ footer {
     font-size: 9px;
   }
 }
+
+/* Mobile touch improvements */
+
+button {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+.game-area {
+  touch-action: pan-y;
+}
+
+#startBtn,
+#jumpBtn,
+#duckBtn,
+#pauseBtn {
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+@media (max-width: 600px) {
+  .controls button {
+    min-height: 55px;
+    font-size: 14px;
+  }
+
+  #startBtn {
+    min-height: 50px;
+  }
+}
+
