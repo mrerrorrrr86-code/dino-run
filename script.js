@@ -358,28 +358,24 @@ document.addEventListener("keyup", event => {
 
 draw();
 
-// Mobile touch support fix
+// Universal mouse + mobile touch controls
 
-startBtn.addEventListener("touchend", function(event) {
-  event.preventDefault();
+startBtn.addEventListener("click", startGame);
+pauseBtn.addEventListener("click", togglePause);
 
-  if (!running) {
-    startGame();
-  }
-}, { passive: false });
-
-jumpBtn.addEventListener("touchstart", function(event) {
+jumpBtn.addEventListener("pointerdown", (event) => {
   event.preventDefault();
   jump();
-}, { passive: false });
+});
 
-duckBtn.addEventListener("touchstart", function(event) {
+duckBtn.addEventListener("pointerdown", (event) => {
   event.preventDefault();
   setDuck(true);
-}, { passive: false });
+});
 
-duckBtn.addEventListener("touchend", function(event) {
-  event.preventDefault();
-  setDuck(false);
-}, { passive: false });
+["pointerup", "pointerleave", "pointercancel"].forEach(type => {
+  duckBtn.addEventListener(type, () => setDuck(false));
+});
+
+
 
